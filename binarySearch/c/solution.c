@@ -24,6 +24,6 @@ int countNegatives(int** grid, int gridSize, int *gridColSize){
 }
 
 /*
- * 对于 c 语言来说，半路跳出短循环导致指令预测失败，
+ * 对于 c 语言来说，半路跳出短循环导致指令预测失败(指令缓存未命中)，
  * 可能反而导致时间变长。不过如果循环足够长，还是有意义的
  * */
