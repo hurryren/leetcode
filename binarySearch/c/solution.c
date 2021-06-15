@@ -4,6 +4,9 @@
 #include<stdio.h>
 #include "solution.h"
 
+
+// https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/submissions/
+// time 20210615
 int countNegatives(int** grid, int gridSize, int *gridColSize){
     int result = 0;
     for(int i = 0; i< gridSize;i++){
@@ -18,5 +21,9 @@ int countNegatives(int** grid, int gridSize, int *gridColSize){
         }
     }
     return result;
-
 }
+
+/*
+ * 对于 c 语言来说，半路跳出短循环导致指令预测失败，
+ * 可能反而导致时间变长。不过如果循环足够长，还是有意义的
+ * */
