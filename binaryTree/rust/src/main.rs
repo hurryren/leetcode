@@ -84,9 +84,9 @@ impl Solution{
     pub fn search_bst(root:Option<Rc<RefCell<TreeNode>>>,val:i32) -> Option<Rc<RefCell<TreeNode>>>{
         if let Some(node) = &root{
             if node.borrow().val < val{
-                return Self::search_bst(node.borrow.right.clone(),val);
+                return Self::search_bst(node.borrow().right.clone(),val);
             }else if node.borrow().val  > val{
-                return Self::search_bst(node.borrow.left.clone(),val);
+                return Self::search_bst(node.borrow().left.clone(),val);
             }
         }
         root
